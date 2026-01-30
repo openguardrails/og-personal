@@ -1,0 +1,65 @@
+{
+  "name": "og-personal",
+  "version": "0.1.0",
+  "description": "OG Personal — The first guard agent for your personal AI assistant - 24/7 security monitoring, risk detection, and auto-remediation",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "og": "./og.mjs"
+  },
+  "files": [
+    "dist/**",
+    "og.mjs"
+  ],
+  "scripts": {
+    "dev": "bun src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "lint": "oxlint src",
+    "format": "oxfmt --check src",
+    "format:fix": "oxfmt --write src",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "ui:dev": "cd ui && pnpm dev",
+    "ui:build": "cd ui && pnpm build"
+  },
+  "keywords": [
+    "openclaw",
+    "security",
+    "openguardrails",
+    "og-personal",
+    "ai-safety",
+    "prompt-injection"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "pnpm@10.23.0",
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "chalk": "^5.6.2",
+    "chokidar": "^5.0.0",
+    "commander": "^14.0.2",
+    "express": "^5.2.1",
+    "hono": "4.11.4",
+    "openai": "^4.77.0",
+    "ws": "^8.19.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.10",
+    "@types/ws": "^8.18.1",
+    "oxfmt": "0.26.0",
+    "oxlint": "^1.41.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "clawdbot": {
+    "extensions": [
+      "dist/plugin/index.js"
+    ]
+  }
+}

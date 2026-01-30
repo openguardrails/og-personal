@@ -1,0 +1,24 @@
+{
+  "id": "og-personal",
+  "name": "OG Personal",
+  "description": "AI security guardrails for OpenClaw — real-time threat detection on LLM input/output",
+  "version": "0.1.0",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "ogserverUrl": {
+        "type": "string",
+        "description": "OpenGuardrails API URL for detection"
+      },
+      "apiKey": {
+        "type": "string",
+        "description": "API key for OpenGuardrails detection service"
+      },
+      "model": {
+        "type": "string",
+        "description": "Detection model name"
+      }
+    }
+  }
+}

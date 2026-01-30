@@ -1,0 +1,17 @@
+{
+  "name": "og-personal-ui",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lit": "^3.3.2",
+    "vite": "7.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
